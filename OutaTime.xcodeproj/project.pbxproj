@@ -8,20 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		A43D84762302C1C40093AB12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D84752302C1C40093AB12 /* AppDelegate.swift */; };
-		A43D84782302C1C40093AB12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D84772302C1C40093AB12 /* ViewController.swift */; };
 		A43D847B2302C1C40093AB12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43D84792302C1C40093AB12 /* Main.storyboard */; };
 		A43D847D2302C1C50093AB12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A43D847C2302C1C50093AB12 /* Assets.xcassets */; };
 		A43D84802302C1C50093AB12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A43D847E2302C1C50093AB12 /* LaunchScreen.storyboard */; };
+		A43D84882302C1E40093AB12 /* TimeCircuitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D84872302C1E40093AB12 /* TimeCircuitsViewController.swift */; };
+		A43D848A2302C1F00093AB12 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43D84892302C1F00093AB12 /* DatePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A414CE612302C2BA00391C2A /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		A43D84722302C1C40093AB12 /* OutaTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutaTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A43D84752302C1C40093AB12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A43D84772302C1C40093AB12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A43D847A2302C1C40093AB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A43D847C2302C1C50093AB12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A43D847F2302C1C50093AB12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A43D84812302C1C50093AB12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A43D84872302C1E40093AB12 /* TimeCircuitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCircuitsViewController.swift; sourceTree = "<group>"; };
+		A43D84892302C1F00093AB12 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +57,40 @@
 		A43D84742302C1C40093AB12 /* OutaTime */ = {
 			isa = PBXGroup;
 			children = (
+				A43D848B2302C1F40093AB12 /* View Controllers */,
 				A43D84752302C1C40093AB12 /* AppDelegate.swift */,
-				A43D84772302C1C40093AB12 /* ViewController.swift */,
 				A43D84792302C1C40093AB12 /* Main.storyboard */,
 				A43D847C2302C1C50093AB12 /* Assets.xcassets */,
 				A43D847E2302C1C50093AB12 /* LaunchScreen.storyboard */,
 				A43D84812302C1C50093AB12 /* Info.plist */,
+				A43D848C2302C2390093AB12 /* Resources */,
 			);
 			path = OutaTime;
+			sourceTree = "<group>";
+		};
+		A43D848B2302C1F40093AB12 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A43D84872302C1E40093AB12 /* TimeCircuitsViewController.swift */,
+				A43D84892302C1F00093AB12 /* DatePickerViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A43D848C2302C2390093AB12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A43D848D2302C2400093AB12 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A43D848D2302C2400093AB12 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A414CE612302C2BA00391C2A /* digital-7.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A43D84782302C1C40093AB12 /* ViewController.swift in Sources */,
+				A43D84882302C1E40093AB12 /* TimeCircuitsViewController.swift in Sources */,
 				A43D84762302C1C40093AB12 /* AppDelegate.swift in Sources */,
+				A43D848A2302C1F00093AB12 /* DatePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
