@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gu-Zd-LsC">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -15,31 +15,32 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Date Picker View Controller-->
         <scene sceneID="OF7-6S-vTH">
             <objects>
-                <viewController id="6Sy-ib-Sgf" sceneMemberID="viewController">
+                <viewController id="6Sy-ib-Sgf" customClass="DatePickerViewController" customModule="OutaTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MXB-1l-ARs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aCi-Q9-tuD">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCi-Q9-tuD">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Cancel" id="hIr-pL-GEg"/>
+                                    <barButtonItem title="Cancel" id="hIr-pL-GEg">
+                                        <connections>
+                                            <action selector="cancelTapped:" destination="6Sy-ib-Sgf" id="LAo-Ua-vTc"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="N6c-iM-jjV"/>
-                                    <barButtonItem style="plain" id="iUC-W7-xe7">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zpu-20-wIO">
-                                            <rect key="frame" x="357" y="7" width="37" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Done"/>
-                                        </button>
+                                    <barButtonItem title="Done" id="3FG-UA-ihm">
+                                        <connections>
+                                            <action selector="doneTapped:" destination="6Sy-ib-Sgf" id="4JL-P9-Zal"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vr9-aa-ycB">
-                                <rect key="frame" x="0.0" y="345" width="414" height="216"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vr9-aa-ycB">
+                                <rect key="frame" x="0.0" y="497" width="414" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="587384528.68767095">
                                     <!--2019-08-13 10:22:08 +0000-->
                                 </date>
@@ -47,11 +48,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Vr9-aa-ycB" firstAttribute="centerX" secondItem="mYd-vI-d1e" secondAttribute="centerX" id="3aX-Gc-EAg"/>
-                            <constraint firstItem="Vr9-aa-ycB" firstAttribute="centerY" secondItem="mYd-vI-d1e" secondAttribute="centerY" id="Axe-lc-6hG"/>
+                            <constraint firstItem="Vr9-aa-ycB" firstAttribute="leading" secondItem="mYd-vI-d1e" secondAttribute="leading" id="2Cn-XI-XEw"/>
+                            <constraint firstItem="aCi-Q9-tuD" firstAttribute="trailing" secondItem="mYd-vI-d1e" secondAttribute="trailing" id="L3Z-y2-Hge"/>
+                            <constraint firstItem="Vr9-aa-ycB" firstAttribute="trailing" secondItem="mYd-vI-d1e" secondAttribute="trailing" id="YCr-ew-sLC"/>
+                            <constraint firstItem="mYd-vI-d1e" firstAttribute="bottom" secondItem="aCi-Q9-tuD" secondAttribute="bottom" id="cva-3V-fGU"/>
+                            <constraint firstItem="Vr9-aa-ycB" firstAttribute="centerX" secondItem="mYd-vI-d1e" secondAttribute="centerX" id="lte-aR-OIk"/>
+                            <constraint firstItem="aCi-Q9-tuD" firstAttribute="top" secondItem="Vr9-aa-ycB" secondAttribute="bottom" constant="100" id="u1V-VJ-rX3"/>
+                            <constraint firstItem="aCi-Q9-tuD" firstAttribute="leading" secondItem="mYd-vI-d1e" secondAttribute="leading" id="vwd-oN-bfL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mYd-vI-d1e"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Vr9-aa-ycB" id="hk9-7P-T7a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKs-QE-a3D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,10 +80,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOJ-Kq-30h">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
                                         <state key="normal" title="SET DESTINATION TIME"/>
+                                        <connections>
+                                            <segue destination="6Sy-ib-Sgf" kind="presentation" identifier="ModalDestinationDatePickerSegue" id="IzA-VM-3pT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilb-HB-O0O">
                                         <rect key="frame" x="0.0" y="44" width="414" height="36"/>
                                         <state key="normal" title="TRAVEL BACK"/>
+                                        <connections>
+                                            <action selector="travelBack:" destination="3gu-Zd-LsC" eventType="touchUpInside" id="bHd-Xz-8K4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -113,7 +128,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUN 12 2019" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B9I-Em-yAl">
                                                 <rect key="frame" x="0.0" y="34" width="414" height="60"/>
                                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="50"/>
-                                                <color key="textColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.50325379770000001" green="1" blue="0.39759173780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -130,7 +145,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="--- -- ----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYD-gL-MKc">
                                                 <rect key="frame" x="0.0" y="28.5" width="414" height="66"/>
                                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="50"/>
-                                                <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -167,6 +182,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oeP-to-RZx"/>
                     </view>
+                    <connections>
+                        <outlet property="destinationLabel" destination="ab6-ur-1o6" id="KAh-R3-Z0D"/>
+                        <outlet property="lastTimeDepartedLabel" destination="BYD-gL-MKc" id="dYx-ui-Pfi"/>
+                        <outlet property="presentTimeLabel" destination="B9I-Em-yAl" id="gxP-pK-S0k"/>
+                        <outlet property="speedLabel" destination="qOj-uL-ea4" id="qCe-EJ-KQO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xz7-g2-udn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
